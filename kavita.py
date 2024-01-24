@@ -3,7 +3,6 @@ import streamlit as st
 from textblob import TextBlob
       
 
-
 def correct_spelling(get_data):
     corr = TextBlob(get_data)
     data = corr.correct()
@@ -20,7 +19,7 @@ def main():
         corrected_spelling = correct_spelling(incorrect_spelling)
         st.success(f"Correct Spelling: {corrected_spelling}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
 
 
@@ -60,5 +59,5 @@ def main_window():
 
     win.mainloop()
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main_window()
